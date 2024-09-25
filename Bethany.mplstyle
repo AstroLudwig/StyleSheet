@@ -1,0 +1,63 @@
+# By Bethany Ludwig
+# Last Edit 2024
+# Options are here: https://github.com/matplotlib/matplotlib/blob/v3.8.4/lib/matplotlib/mpl-data/matplotlibrc
+# My directory is: C:\Users\Betha\anaconda3\Lib\site-packages\matplotlib\mpl-data\stylelib
+
+## ***************************************************************************
+## * FONT                                                                    *
+## ***************************************************************************
+
+# If changing default font settings breaks you this might help : 
+# import matplotlib as mpl
+# mpl.rcParams.update(mpl.rcParamsDefault)
+
+# use tex is so annoying 
+# had to add this to environment variables because my terminal was broken after installing miktek: 
+# PYTHONUTF8=1
+
+# font.family: "serif"
+# font.serif:  "Computer Modern Roman"
+
+mathtext.fontset : "cm"
+font.family: "serif"
+font.serif:  "cmr10" # Computer Modern Roman, same as latex
+font.size:    16.0
+# Have to add this or minus sign is squares in cmr10 ): 
+axes.unicode_minus: False
+#mathtext.fontset: "dejavuserif"
+#text.usetex: True
+
+## ***************************************************************************
+## * AXES                                                                    *
+## ***************************************************************************
+
+axes.facecolor:  "white"  
+axes.labelsize:  20  
+axes.labelpad:   5
+
+## ***************************************************************************
+## * FIGURE                                                                  *
+## ***************************************************************************
+
+figure.facecolor: "white" 
+figure.figsize:     5, 7  # figure size in inches
+
+## ***************************************************************************
+## * TICKS                                                                   *
+## ***************************************************************************
+
+ytick.labelsize: 16
+xtick.labelsize: 16
+
+## ***************************************************************************
+## * LEGEND                                                                  *
+## ***************************************************************************
+
+legend.fontsize: 16
+
+## ***************************************************************************
+## * LINES                                                                   *
+## ***************************************************************************
+
+lines.markersize: 8
+lines.linewidth:  2 

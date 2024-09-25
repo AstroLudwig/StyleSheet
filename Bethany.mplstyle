@@ -6,26 +6,35 @@
 ## ***************************************************************************
 ## * FONT                                                                    *
 ## ***************************************************************************
-
+# use tex is so annoying but if you have to here's how I set it up on windows
+# keep in mind it takes FOREVER so you may want to switch back and forth
+# install miktek 
+# if terminal complains about a utf character, check that the path in your environment variables 
+# doesn't have anything weird. Otherwise add PYTHONUTF8=1
+# you can add fonts to miktek with miktex-maketfm.exe cmss10
+# I had to completely restart vscode (not just terminal) before it worked. 
+# I also installed ghostscript and added it to the path, not sure if this is necessary or not. 
 # If changing default font settings breaks you this might help : 
 # import matplotlib as mpl
 # mpl.rcParams.update(mpl.rcParamsDefault)
+# or plt.rcParams.update({"text.usetex": False})
 
-# use tex is so annoying 
-# had to add this to environment variables because my terminal was broken after installing miktek: 
-# PYTHONUTF8=1
-
-# font.family: "serif"
-# font.serif:  "Computer Modern Roman"
-
-mathtext.fontset : "cm"
-font.family: "serif"
-font.serif:  "cmr10" # Computer Modern Roman, same as latex
-font.size:    16.0
-# Have to add this or minus sign is squares in cmr10 ): 
-axes.unicode_minus: False
-#mathtext.fontset: "dejavuserif"
+# If using usetek: 
 #text.usetex: True
+#font.family: Computer Modern Roman
+#text.latex.preamble: \usepackage{amsmath}\usepackage{amssymb}\usepackage{siunitx}[=v2]
+#font.weight = bold # not sure how to get this font to be less spindly looking 
+
+# If not:  
+font.family: serif #or 'sans-serif' or 'monospace'
+font.serif: cmr10
+font.sans-serif: cmss10
+font.monospace: cmtt10
+axes.formatter.use_mathtext: True # to fix the minus signs
+mathtext.fontset: cm
+
+# Other settings
+font.size:    16.0
 
 ## ***************************************************************************
 ## * AXES                                                                    *
